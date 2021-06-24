@@ -5,7 +5,7 @@ class MyAppBar extends StatelessWidget {
 
   // Fields in a Widget subclass are always marked "final".
 
-  final Widget title;
+  final Widget title; // stateless widget
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class MyAppBar extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 8.0),
       decoration: BoxDecoration(color: Colors.blue[500]),
       // Row is a horizontal, linear layout.
-      child: Row(
+      child: Row( // |   |   |   |
         // <Widget> is the type of items in the list.
         children: <Widget>[
           IconButton(
@@ -55,7 +55,7 @@ class MyScaffold extends StatelessWidget {
                   .headline6,
             ),
           ),
-          Expanded(
+          Expanded( // expands to fill any remaining available space that hasn’t been consumed by the other children.
             child: Center(
               child: Text('Hello, world!'),
             ),
