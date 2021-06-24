@@ -14,7 +14,8 @@ class MyAppBar extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 8.0),
       decoration: BoxDecoration(color: Colors.blue[500]),
       // Row is a horizontal, linear layout.
-      child: Row( // |   |   |   |
+      child: Row(
+        // |   |   |   |
         // <Widget> is the type of items in the list.
         children: <Widget>[
           IconButton(
@@ -55,12 +56,51 @@ class MyScaffold extends StatelessWidget {
                   .headline6,
             ),
           ),
-          Expanded( // expands to fill any remaining available space that hasn’t been consumed by the other children.
+          Expanded(
+            // expands to fill any remaining available space that hasn’t been consumed by the other children.
             child: Center(
               child: Text('Hello, world!'),
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+//using material components
+class TutorialHome extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // Scaffold is a layout for
+    // the major Material Components.
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.menu),
+          tooltip: 'Navigation menu',
+          onPressed: null,
+        ),
+        title: Text('Example title'),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.search),
+            tooltip: 'Search',
+            onPressed: null,
+          ),
+        ],
+      ),
+      // body is the majority of the screen.
+      body: Center(
+        child: Row(children: <Widget>[
+          Text('Hello, world!'),
+          Text('hello world2'),
+        ]),
+      ),
+      floatingActionButton: FloatingActionButton(
+        tooltip: 'Add', // used by assistive technologies
+        child: Icon(Icons.add),
+        onPressed: null,
       ),
     );
   }
