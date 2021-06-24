@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         ),
         home: Scaffold(
           body: Center(
-            child: MyButton(),
+            child: Counter(),
           ),
           // home: TutorialHome(),
           //home: MyHomePage(title: 'Flutter Demo Home Page'),
