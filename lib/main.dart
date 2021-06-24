@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'src/basicWidget.dart';
-//import 'src/materialComponent.dart';
 
 void main() {
   runApp(MyApp());
