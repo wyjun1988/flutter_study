@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_study/src/basicLayout.dart';
 
 import 'src/basicWidget.dart';
 
@@ -24,13 +25,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: ShoppingList(
-        products: <Product>[
-          Product(name: 'Eggs'),
-          Product(name: 'Flour'),
-          Product(name: 'Chocolate chips'),
-        ],
-      ),
+      home: buildImageColumn(),
     );
   }
 }
