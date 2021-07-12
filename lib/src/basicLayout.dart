@@ -22,7 +22,7 @@ Widget buildImageColumn() => Container(
     children: [
       //_buildImageRow(1),
       //_buildImageRow(3),
-      _buildStack(),
+      _buildCard(),
     ],
   ),
 );
@@ -58,4 +58,31 @@ Widget _buildStack() => Stack(
       radius: 50,
     ),
   ],
+);
+
+Widget _buildCard() => SizedBox(
+  height: 1010,
+  child: Card(
+    child: Column(
+      children: [
+        Image.asset('graphics/test.jpg'),
+        Divider(),
+        ListTile(
+          title: Text('(408) 555-1212',
+              style: TextStyle(fontWeight: FontWeight.w500)),
+          leading: Icon(
+            Icons.contact_phone,
+            color: Colors.blue[500],
+          ),
+        ),
+        ListTile(
+          title: Text('costa@example.com'),
+          leading: Icon(
+            Icons.contact_mail,
+            color: Colors.blue[500],
+          ),
+        ),
+      ],
+    ),
+  ),
 );
