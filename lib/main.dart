@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study/src/basicLayout.dart';
+import 'package:flutter_study/src/simpleLayoutExample.dart';
 
 import 'src/basicWidget.dart';
 
@@ -23,9 +24,20 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.purple,
+        primaryColor: Colors.purple,
       ),
-      home: buildImageColumn(),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('flutter layout demo'),
+        ),
+        body: ListView(
+          children: [
+            imageSection(),
+            titleSection(),
+            buttonSection(Theme.of(context).primaryColor)
+          ],
+        ),
+      )
     );
   }
 }
