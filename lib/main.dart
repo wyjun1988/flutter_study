@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study/src/basicLayout.dart';
 import 'package:flutter_study/src/layoutConstraint.dart';
+import 'package:flutter_study/src/navigator.dart';
 import 'package:flutter_study/src/simpleLayoutExample.dart';
 import 'package:flutter_study/src/stateWidget.dart';
 
 import 'src/basicWidget.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(HeroApp());
 }
 
 class MyApp extends StatelessWidget {
